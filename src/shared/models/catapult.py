@@ -86,9 +86,7 @@ class CatapultPeriod(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     catapult_id = Column(String, unique=True, index=True, nullable=False)
-    activity_id = Column(
-        Integer, ForeignKey("catapult_activities.id"), nullable=False
-    )
+    activity_id = Column(Integer, ForeignKey("catapult_activities.id"), nullable=False)
     name = Column(String, nullable=False)
     start_time = Column(DateTime, nullable=False)
     end_time = Column(DateTime, nullable=False)
@@ -120,9 +118,7 @@ class CatapultParameter(Base):
 
 class CatapultWorkload(Base):
     __tablename__ = "catapult_workload"
-    __table_args__ = (
-        UniqueConstraint("athlete_id", "activity_id", "period_id"),
-    )
+    __table_args__ = (UniqueConstraint("athlete_id", "activity_id", "period_id"),)
 
     id = Column(Integer, primary_key=True, index=True)
     athlete_id = Column(
