@@ -11,3 +11,4 @@ from shared.models.catapult import (  # noqa: E402, F401
     CatapultTeam,
     CatapultWorkload,
 )
+from shared.models.sync_log import SyncLog  # noqa: E402, F401
