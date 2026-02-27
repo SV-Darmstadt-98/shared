@@ -138,3 +138,34 @@ class CatapultWorkload(Base):
     updated_at = Column(
         DateTime, server_default=func.now(), onupdate=func.now(), nullable=False
     )
+
+
+class CatapultSessionWorkload(Base):
+    __tablename__ = "catapult_session_workload"
+    __table_args__ = (UniqueConstraint("athlete_id", "activity_id"),)
+
+    id = Column(Integer, primary_key=True, index=True)
+    athlete_id = Column(
+        Integer, ForeignKey("catapult_athletes.id"), nullable=False, index=True
+    )
+    activity_id = Column(
+        Integer, ForeignKey("catapult_activities.id"), nullable=False, index=True
+    )
+    activity_name = Column(String, nullable=False)
+    activity_start_time = Column(DateTime, nullable=False)
+    activity_end_time = Column(DateTime, nullable=False)
+    activity_tags = Column(ARRAY(String))
+    athlete_first_name = Column(String, nullable=False)
+    athlete_last_name = Column(String, nullable=False)
+    athlete_jersey = Column(String)
+    athlete_position = Column(String)
+    total_distance = Column(Float)
+    sprints = Column(Integer)
+    sprint_distance = Column(Float)
+    hsr_distance = Column(Float)
+    accelerations = Column(Integer)
+    decelerations = Column(Integer)
+    created_at = Column(DateTime, server_default=func.now(), nullable=False)
+    updated_at = Column(
+        DateTime, server_default=func.now(), onupdate=func.now(), nullable=False
+    )

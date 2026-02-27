@@ -8,6 +8,7 @@ from shared.models.catapult import (  # noqa: E402, F401
     CatapultAthlete,
     CatapultParameter,
     CatapultPeriod,
+    CatapultSessionWorkload,
     CatapultTeam,
     CatapultWorkload,
 )
