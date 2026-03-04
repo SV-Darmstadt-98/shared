@@ -169,3 +169,22 @@ class CatapultSessionWorkload(Base):
     updated_at = Column(
         DateTime, server_default=func.now(), onupdate=func.now(), nullable=False
     )
+
+
+class CatapultChronicWorkload(Base):
+    __tablename__ = "catapult_chronic_workload"
+    __table_args__ = (UniqueConstraint("athlete_id", "date", "parameter"),)
+
+    id = Column(Integer, primary_key=True, index=True)
+    athlete_id = Column(
+        Integer, ForeignKey("catapult_athletes.id"), nullable=False, index=True
+    )
+    date = Column(Date, nullable=False, index=True)
+    parameter = Column(String, nullable=False)
+    daily_value = Column(Float)
+    acute_value = Column(Float)
+    chronic_value = Column(Float)
+    created_at = Column(DateTime, server_default=func.now(), nullable=False)
+    updated_at = Column(
+        DateTime, server_default=func.now(), onupdate=func.now(), nullable=False
+    )

@@ -45,3 +45,15 @@ class SessionWorkloadRead(BaseModel):
     decelerations: int | None
 
     model_config = {"from_attributes": True}
+
+
+class ChronicWorkloadRead(BaseModel):
+    id: int
+    athlete_id: int
+    date: datetime
+    parameter: str
+    daily_value: float | None
+    acute_value: float | None
+    chronic_value: float | None
+
+    model_config = {"from_attributes": True}
