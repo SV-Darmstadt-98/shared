@@ -52,15 +52,15 @@ class SessionWorkloadRead(BaseModel):
     vb6_distance: float | None
     vb7_distance: float | None
     vb8_distance: float | None
-    # Velocity band efforts
-    vb1_efforts: float | None
-    vb2_efforts: float | None
-    vb3_efforts: float | None
-    vb4_efforts: float | None
-    vb5_efforts: float | None
-    vb6_efforts: float | None
-    vb7_efforts: float | None
-    vb8_efforts: float | None
+    # Velocity band duration
+    vb1_duration: float | None
+    vb2_duration: float | None
+    vb3_duration: float | None
+    vb4_duration: float | None
+    vb5_duration: float | None
+    vb6_duration: float | None
+    vb7_duration: float | None
+    vb8_duration: float | None
     # Acceleration bands
     accel_low_distance: float | None
     accel_low_efforts: float | None
@@ -77,13 +77,13 @@ class SessionWorkloadRead(BaseModel):
     decel_high_efforts: float | None
     # Groups
     low_velocity_distance: float | None
-    low_velocity_efforts: float | None
+    low_velocity_duration: float | None
     med_velocity_distance: float | None
-    med_velocity_efforts: float | None
+    med_velocity_duration: float | None
     high_velocity_distance: float | None
-    high_velocity_efforts: float | None
+    high_velocity_duration: float | None
     sprint_distance: float | None
-    sprint_efforts: float | None
+    sprint_duration: float | None
 
     model_config = {"from_attributes": True}
 
