@@ -3,4 +3,5 @@ from shared.schemas.catapult import ActivityRead as ActivityRead  # noqa: F401
 from shared.schemas.catapult import AthleteRead as AthleteRead  # noqa: F401
 from shared.schemas.catapult import ChronicWorkloadRead as ChronicWorkloadRead  # noqa: F401
 from shared.schemas.catapult import SessionWorkloadRead as SessionWorkloadRead  # noqa: F401
+from shared.schemas.catapult import TeamChronicWorkloadRead as TeamChronicWorkloadRead  # noqa: F401
 from shared.schemas.user import UserCreate, UserRead, UserUpdate  # noqa: F401

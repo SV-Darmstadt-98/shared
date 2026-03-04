@@ -184,6 +184,7 @@ class CatapultChronicWorkload(Base):
     daily_value = Column(Float)
     acute_value = Column(Float)
     chronic_value = Column(Float)
+    acwr = Column(Float)
     created_at = Column(DateTime, server_default=func.now(), nullable=False)
     updated_at = Column(
         DateTime, server_default=func.now(), onupdate=func.now(), nullable=False

@@ -55,5 +55,20 @@ class ChronicWorkloadRead(BaseModel):
     daily_value: float | None
     acute_value: float | None
     chronic_value: float | None
+    acwr: float | None
+
+    model_config = {"from_attributes": True}
+
+
+class TeamChronicWorkloadRead(BaseModel):
+    athlete_id: int
+    athlete_first_name: str
+    athlete_last_name: str
+    athlete_jersey: str | None
+    parameter: str
+    daily_value: float | None
+    acute_value: float | None
+    chronic_value: float | None
+    acwr: float | None
 
     model_config = {"from_attributes": True}
