@@ -131,9 +131,7 @@ class CatapultWorkload(Base):
     # General
     total_duration = Column(Float)
     total_distance = Column(Float)
-    average_velocity = Column(Float)
     max_velocity = Column(Float)
-    total_player_load = Column(Float)
     # Velocity band distance
     vb1_distance = Column(Float)
     vb2_distance = Column(Float)
@@ -143,15 +141,6 @@ class CatapultWorkload(Base):
     vb6_distance = Column(Float)
     vb7_distance = Column(Float)
     vb8_distance = Column(Float)
-    # Velocity band duration
-    vb1_duration = Column(Float)
-    vb2_duration = Column(Float)
-    vb3_duration = Column(Float)
-    vb4_duration = Column(Float)
-    vb5_duration = Column(Float)
-    vb6_duration = Column(Float)
-    vb7_duration = Column(Float)
-    vb8_duration = Column(Float)
     # Acceleration bands
     accel_low_distance = Column(Float)
     accel_low_efforts = Column(Float)
@@ -194,9 +183,8 @@ class CatapultSessionWorkload(Base):
     # General
     total_duration = Column(Float)
     total_distance = Column(Float)
-    average_velocity = Column(Float)
     max_velocity = Column(Float)
-    total_player_load = Column(Float)
+    distance_per_min = Column(Float)
     # Velocity band distance
     vb1_distance = Column(Float)
     vb2_distance = Column(Float)
@@ -206,15 +194,6 @@ class CatapultSessionWorkload(Base):
     vb6_distance = Column(Float)
     vb7_distance = Column(Float)
     vb8_distance = Column(Float)
-    # Velocity band duration
-    vb1_duration = Column(Float)
-    vb2_duration = Column(Float)
-    vb3_duration = Column(Float)
-    vb4_duration = Column(Float)
-    vb5_duration = Column(Float)
-    vb6_duration = Column(Float)
-    vb7_duration = Column(Float)
-    vb8_duration = Column(Float)
     # Acceleration bands
     accel_low_distance = Column(Float)
     accel_low_efforts = Column(Float)
@@ -229,15 +208,14 @@ class CatapultSessionWorkload(Base):
     decel_med_efforts = Column(Float)
     decel_high_distance = Column(Float)
     decel_high_efforts = Column(Float)
-    # Groups
+    # Velocity groups
     low_velocity_distance = Column(Float)
-    low_velocity_duration = Column(Float)
     med_velocity_distance = Column(Float)
-    med_velocity_duration = Column(Float)
     high_velocity_distance = Column(Float)
-    high_velocity_duration = Column(Float)
     sprint_distance = Column(Float)
-    sprint_duration = Column(Float)
+    # Derived metrics
+    high_speed_ratio = Column(Float)
+    mechanical_density = Column(Float)
     created_at = Column(DateTime, server_default=func.now(), nullable=False)
     updated_at = Column(
         DateTime, server_default=func.now(), onupdate=func.now(), nullable=False
