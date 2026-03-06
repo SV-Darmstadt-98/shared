@@ -132,3 +132,5 @@ PCA_FEATURES = [
     "decel_high_efforts",
     *DERIVED_COLUMNS,
 ]
+
+EXCLUDED_PERIOD_TAGS = ["Reha", "Individuell", "Testing"]

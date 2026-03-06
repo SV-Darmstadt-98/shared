@@ -72,6 +72,8 @@ class CatapultActivity(Base):
     athlete_count = Column(Integer)
     period_count = Column(Integer)
     tags = Column(ARRAY(String))
+    day_code = Column(String, nullable=True)
+    activity_type = Column(String, nullable=True)
     modified_at = Column(DateTime)
     created_at = Column(DateTime, server_default=func.now(), nullable=False)
     updated_at = Column(
@@ -90,6 +92,8 @@ class CatapultPeriod(Base):
     name = Column(String, nullable=False)
     start_time = Column(DateTime, nullable=False)
     end_time = Column(DateTime, nullable=False)
+    tags = Column(ARRAY(String))
+    is_injected = Column(Boolean, default=False)
     created_at = Column(DateTime, server_default=func.now(), nullable=False)
     updated_at = Column(
         DateTime, server_default=func.now(), onupdate=func.now(), nullable=False
