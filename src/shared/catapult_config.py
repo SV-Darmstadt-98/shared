@@ -112,25 +112,3 @@ METRIC_COLUMNS = [p.column for p in PARAMS]
 GROUP_COLUMNS = [g.column for g in GROUPS]
 SESSION_AGG = {p.column: p.session_agg for p in PARAMS}
 DERIVED_COLUMNS = [m.column for m in DERIVED_METRICS]
-
-PCA_FEATURES = [
-    "total_duration",
-    "total_distance",
-    "max_velocity",
-    *GROUP_COLUMNS,
-    "accel_low_distance",
-    "accel_low_efforts",
-    "accel_med_distance",
-    "accel_med_efforts",
-    "accel_high_distance",
-    "accel_high_efforts",
-    "decel_low_distance",
-    "decel_low_efforts",
-    "decel_med_distance",
-    "decel_med_efforts",
-    "decel_high_distance",
-    "decel_high_efforts",
-    *DERIVED_COLUMNS,
-]
-
-EXCLUDED_PERIOD_TAGS = ["Reha", "Individuell", "Testing"]
