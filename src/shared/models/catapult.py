@@ -146,15 +146,8 @@ class CatapultWorkload(Base):
     vb6_distance = Column(Float)
     vb7_distance = Column(Float)
     vb8_distance = Column(Float)
-    # Velocity band effort count
-    vb1_efforts = Column(Float)
-    vb2_efforts = Column(Float)
-    vb3_efforts = Column(Float)
-    vb4_efforts = Column(Float)
-    vb5_efforts = Column(Float)
-    vb6_efforts = Column(Float)
-    vb7_efforts = Column(Float)
-    vb8_efforts = Column(Float)
+    # Sprint effort count
+    sprint_efforts = Column(Float)
     # Acceleration bands
     accel_low_distance = Column(Float)
     accel_low_efforts = Column(Float)
@@ -208,15 +201,8 @@ class CatapultSessionWorkload(Base):
     vb6_distance = Column(Float)
     vb7_distance = Column(Float)
     vb8_distance = Column(Float)
-    # Velocity band effort count
-    vb1_efforts = Column(Float)
-    vb2_efforts = Column(Float)
-    vb3_efforts = Column(Float)
-    vb4_efforts = Column(Float)
-    vb5_efforts = Column(Float)
-    vb6_efforts = Column(Float)
-    vb7_efforts = Column(Float)
-    vb8_efforts = Column(Float)
+    # Sprint effort count
+    sprint_efforts = Column(Float)
     # Acceleration bands
     accel_low_distance = Column(Float)
     accel_low_efforts = Column(Float)
