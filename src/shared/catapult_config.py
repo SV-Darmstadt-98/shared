@@ -35,6 +35,15 @@ PARAMS = [
     Param("velocity_band6_total_distance", "vb6_distance"),
     Param("velocity_band7_total_distance", "vb7_distance"),
     Param("velocity_band8_total_distance", "vb8_distance"),
+    # Velocity band effort count
+    Param("velocity_band1_total_effort_count", "vb1_efforts"),
+    Param("velocity_band2_total_effort_count", "vb2_efforts"),
+    Param("velocity_band3_total_effort_count", "vb3_efforts"),
+    Param("velocity_band4_total_effort_count", "vb4_efforts"),
+    Param("velocity_band5_total_effort_count", "vb5_efforts"),
+    Param("velocity_band6_total_effort_count", "vb6_efforts"),
+    Param("velocity_band7_total_effort_count", "vb7_efforts"),
+    Param("velocity_band8_total_effort_count", "vb8_efforts"),
     # Acceleration bands
     Param("gen2_acceleration_band6_total_distance", "accel_low_distance"),
     Param("gen2_acceleration_band6_total_effort_count", "accel_low_efforts"),

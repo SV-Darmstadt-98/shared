@@ -51,6 +51,15 @@ class SessionWorkloadRead(BaseModel):
     vb6_distance: float | None
     vb7_distance: float | None
     vb8_distance: float | None
+    # Velocity band effort count
+    vb1_efforts: float | None
+    vb2_efforts: float | None
+    vb3_efforts: float | None
+    vb4_efforts: float | None
+    vb5_efforts: float | None
+    vb6_efforts: float | None
+    vb7_efforts: float | None
+    vb8_efforts: float | None
     # Acceleration bands
     accel_low_distance: float | None
     accel_low_efforts: float | None
