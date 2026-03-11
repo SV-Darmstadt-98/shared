@@ -40,9 +40,8 @@ class SessionWorkloadRead(BaseModel):
     # General
     total_duration: float | None
     total_distance: float | None
-    average_velocity: float | None
     max_velocity: float | None
-    total_player_load: float | None
+    distance_per_min: float | None
     # Velocity band distance
     vb1_distance: float | None
     vb2_distance: float | None
@@ -52,15 +51,6 @@ class SessionWorkloadRead(BaseModel):
     vb6_distance: float | None
     vb7_distance: float | None
     vb8_distance: float | None
-    # Velocity band duration
-    vb1_duration: float | None
-    vb2_duration: float | None
-    vb3_duration: float | None
-    vb4_duration: float | None
-    vb5_duration: float | None
-    vb6_duration: float | None
-    vb7_duration: float | None
-    vb8_duration: float | None
     # Acceleration bands
     accel_low_distance: float | None
     accel_low_efforts: float | None
@@ -75,15 +65,14 @@ class SessionWorkloadRead(BaseModel):
     decel_med_efforts: float | None
     decel_high_distance: float | None
     decel_high_efforts: float | None
-    # Groups
+    # Velocity groups
     low_velocity_distance: float | None
-    low_velocity_duration: float | None
     med_velocity_distance: float | None
-    med_velocity_duration: float | None
     high_velocity_distance: float | None
-    high_velocity_duration: float | None
     sprint_distance: float | None
-    sprint_duration: float | None
+    # Derived metrics
+    high_speed_ratio: float | None
+    mechanical_density: float | None
 
     model_config = {"from_attributes": True}
 
