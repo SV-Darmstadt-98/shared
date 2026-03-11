@@ -75,6 +75,7 @@ class CatapultActivity(Base):
     day_code = Column(String, nullable=True)
     activity_type = Column(String, nullable=True)
     modified_at = Column(DateTime)
+    is_deleted = Column(Boolean, default=False)
     created_at = Column(DateTime, server_default=func.now(), nullable=False)
     updated_at = Column(
         DateTime, server_default=func.now(), onupdate=func.now(), nullable=False
